@@ -4,36 +4,38 @@ import SwiftUI
 
 struct IsolatedEditinView: View {
   @StateObject var editingStack = Mocks.makeEditingStack(image: Mocks.imageHorizontal())
-  @State private var fullScreenView: FullscreenIdentifiableView?
+  @State var fullScreenView: FullscreenIdentifiableView?
 
   var body: some View {
-    Form.init {
-      Button("Crop") {
-        fullScreenView = .init {
-          SwiftUIPhotosCropView(
-            editingStack: editingStack,
-            onDone: {},
-            onCancel: {}
-          )
-
+    Form {
+      Section {
+        Button("Crop") {
+          fullScreenView = FullscreenIdentifiableView(editingStack: editingStack, mode: .crop)
         }
-      }
-
-      Button("Custom Crop") {
-        fullScreenView = .init { DemoCropView(editingStack: {editingStack}) }
-      }
-
-      Button("Blur Mask") {
-        fullScreenView = .init { MaskingViewWrapper(editingStack: editingStack) }
+        
+        Button("Custom Crop") {
+          fullScreenView = FullscreenIdentifiableView(editingStack: editingStack, mode: .customCrop)
+        }
+        
+        Button("Blur Mask") {
+          fullScreenView = FullscreenIdentifiableView(editingStack: editingStack, mode: .blurMask)
+        }
       }
     }
     .navigationTitle("Isolated-Editing")
-    .fullScreenCover(
-      item: $fullScreenView,
-      onDismiss: {},
-      content: {
-        $0
+    .fullScreenCover(item: $fullScreenView) { view in
+      switch view.mode {
+      case .crop:
+        SwiftUIPhotosCropView(
+          editingStack: view.editingStack,
+          onDone: {},
+          onCancel: {}
+        )
+      case .customCrop:
+        DemoCropView(editingStack: { view.editingStack })
+      case .blurMask:
+        MaskingViewWrapper(editingStack: view.editingStack)
       }
-    )
+    }
   }
 }

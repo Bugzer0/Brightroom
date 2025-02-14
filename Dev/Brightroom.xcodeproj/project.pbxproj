@@ -38,18 +38,16 @@
 		4B58E82F260F0027004A834F /* orientation_left.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 4B254FE8260BB32600F77E9A /* orientation_left.HEIC */; };
 		4B58E830260F0027004A834F /* orientation_up_mirrored.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 4B254FEB260BB32600F77E9A /* orientation_up_mirrored.HEIC */; };
 		4B58E831260F0027004A834F /* orientation_up.HEIC in Resources */ = {isa = PBXBuildFile; fileRef = 4B254FED260BB32600F77E9A /* orientation_up.HEIC */; };
-		4B5E72BC2B6B761800DE7A2A /* Reveal-SDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4B5E72BB2B6B761800DE7A2A /* Reveal-SDK */; };
 		4B75114025F13276002D804A /* DemoCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75113F25F13276002D804A /* DemoCropView.swift */; };
 		4B7513C82B6BEDFD00A4743E /* SwiftUIHosting in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7513C72B6BEDFD00A4743E /* SwiftUIHosting */; };
 		4B7513CB2B6BEE2100A4743E /* SwiftUISupport in Frameworks */ = {isa = PBXBuildFile; productRef = 4B7513CA2B6BEE2100A4743E /* SwiftUISupport */; };
 		4B7EE66D25F515B400E17AF1 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7EE66B25F515B400E17AF1 /* XCAssets+Generated.swift */; };
 		4B8CAF6925FFCD720075032A /* IsolatedEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CAF6825FFCD720075032A /* IsolatedEditingView.swift */; };
-		4B8CAF6E25FFCE720075032A /* FullscreenIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CAF6D25FFCE720075032A /* FullscreenIdentifiableView.swift */; };
 		4B8CAF7325FFD13D0075032A /* BlurryMaskingViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8CAF7225FFD13D0075032A /* BlurryMaskingViewWrapper.swift */; };
 		4B9325832B6A923400DDABAC /* RotateScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9325822B6A923400DDABAC /* RotateScrollView.swift */; };
 		4B9369E925F940E600B18571 /* nasa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B9369E725F940E600B18571 /* nasa.jpg */; };
 		4B98CCBC25EFF31300E4F61F /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98CCBB25EFF31300E4F61F /* SwiftUIDemoApp.swift */; };
-		4B98CCBE25EFF31300E4F61F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98CCBD25EFF31300E4F61F /* ContentView.swift */; };
+		4B98CCBE25EFF31300E4F61F /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98CCBD25EFF31300E4F61F /* ContentView2.swift */; };
 		4B98CCC325EFF31400E4F61F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B98CCC225EFF31400E4F61F /* Preview Assets.xcassets */; };
 		4B98CCE725EFF4EF00E4F61F /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B98CCE625EFF4EF00E4F61F /* Mocks.swift */; };
 		4B98CF5325F0122000E4F61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B600B29216B7C9E001E1456 /* Assets.xcassets */; };
@@ -91,6 +89,25 @@
 		4BF934202614CAD600E0637A /* CGContextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9341F2614CAD600E0637A /* CGContextTests.swift */; };
 		4BF934282614CB6000E0637A /* screenshot-8bit-lcd.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF934272614CB6000E0637A /* screenshot-8bit-lcd.png */; };
 		4BF934412614D08300E0637A /* screenshot-8bit-p3-alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BF934402614D08300E0637A /* screenshot-8bit-p3-alpha.png */; };
+		E71F40202D5EF2DF008992D1 /* ImageEditSaturationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401D2D5EF2DF008992D1 /* ImageEditSaturationControl.swift */; };
+		E71F40212D5EF2DF008992D1 /* ImageEditShadowsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401E2D5EF2DF008992D1 /* ImageEditShadowsControl.swift */; };
+		E71F40222D5EF2DF008992D1 /* ImageEditTemperatureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401F2D5EF2DF008992D1 /* ImageEditTemperatureControl.swift */; };
+		E71F40232D5EF2DF008992D1 /* ImageEditHighlightsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401C2D5EF2DF008992D1 /* ImageEditHighlightsControl.swift */; };
+		E71F40242D5EF2DF008992D1 /* ImageEditExposureControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40192D5EF2DF008992D1 /* ImageEditExposureControl.swift */; };
+		E71F40252D5EF2DF008992D1 /* ImageEditFilterControlBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401A2D5EF2DF008992D1 /* ImageEditFilterControlBase.swift */; };
+		E71F40262D5EF2DF008992D1 /* ImageEditContrastControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40182D5EF2DF008992D1 /* ImageEditContrastControl.swift */; };
+		E71F40272D5EF2DF008992D1 /* ImageEditFilterControlRepresentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F401B2D5EF2DF008992D1 /* ImageEditFilterControlRepresentables.swift */; };
+		E71F402A2D5EF559008992D1 /* FullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40292D5EF559008992D1 /* FullscreenView.swift */; };
+		E71F402B2D5EF559008992D1 /* FullscreenIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */; };
+		E736D3EB2D5EADB4007747CC /* ImageEditStepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E52D5EADB4007747CC /* ImageEditStepSlider.swift */; };
+		E736D3EC2D5EADB4007747CC /* ImageEditMenuControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E32D5EADB4007747CC /* ImageEditMenuControlView.swift */; };
+		E736D3ED2D5EADB4007747CC /* ImageEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E82D5EADB4007747CC /* ImageEditViewModel.swift */; };
+		E736D3EF2D5EADB4007747CC /* ImageEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E72D5EADB4007747CC /* ImageEditView.swift */; };
+		E736D3F02D5EADB4007747CC /* ImageEditNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E42D5EADB4007747CC /* ImageEditNavigationView.swift */; };
+		E736D3F22D5EADC2007747CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3F12D5EADC2007747CC /* ContentView.swift */; };
+		E736D3F42D5EAFE8007747CC /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3F32D5EAFE8007747CC /* FilterButton.swift */; };
+		E736D4052D5EB86B007747CC /* ImagePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D4042D5EB86B007747CC /* ImagePreviewView.swift */; };
+		E736D4062D5EB86B007747CC /* ImageEditMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D4032D5EB86B007747CC /* ImageEditMenuView.swift */; };
 		FC06C87F2A53AF4500215B89 /* BrightroomEngine in Frameworks */ = {isa = PBXBuildFile; productRef = FC06C87E2A53AF4500215B89 /* BrightroomEngine */; };
 		FC06C8812A53AF4500215B89 /* BrightroomUI in Frameworks */ = {isa = PBXBuildFile; productRef = FC06C8802A53AF4500215B89 /* BrightroomUI */; };
 		FC110D2B2660F90200CC45EA /* ImageSourceInitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC110D2A2660F90200CC45EA /* ImageSourceInitTest.swift */; };
@@ -519,13 +536,12 @@
 		4B75113F25F13276002D804A /* DemoCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCropView.swift; sourceTree = "<group>"; };
 		4B7EE66B25F515B400E17AF1 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		4B8CAF6825FFCD720075032A /* IsolatedEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsolatedEditingView.swift; sourceTree = "<group>"; };
-		4B8CAF6D25FFCE720075032A /* FullscreenIdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenIdentifiableView.swift; sourceTree = "<group>"; };
 		4B8CAF7225FFD13D0075032A /* BlurryMaskingViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurryMaskingViewWrapper.swift; sourceTree = "<group>"; };
 		4B9325822B6A923400DDABAC /* RotateScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateScrollView.swift; sourceTree = "<group>"; };
 		4B9369E725F940E600B18571 /* nasa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nasa.jpg; sourceTree = "<group>"; };
 		4B98CCB925EFF31300E4F61F /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B98CCBB25EFF31300E4F61F /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
-		4B98CCBD25EFF31300E4F61F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B98CCBD25EFF31300E4F61F /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		4B98CCC225EFF31400E4F61F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B98CCC425EFF31400E4F61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B98CCE625EFF4EF00E4F61F /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
@@ -561,6 +577,25 @@
 		4BF9341F2614CAD600E0637A /* CGContextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGContextTests.swift; sourceTree = "<group>"; };
 		4BF934272614CB6000E0637A /* screenshot-8bit-lcd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-8bit-lcd.png"; sourceTree = "<group>"; };
 		4BF934402614D08300E0637A /* screenshot-8bit-p3-alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screenshot-8bit-p3-alpha.png"; sourceTree = "<group>"; };
+		E71F40182D5EF2DF008992D1 /* ImageEditContrastControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditContrastControl.swift; sourceTree = "<group>"; };
+		E71F40192D5EF2DF008992D1 /* ImageEditExposureControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditExposureControl.swift; sourceTree = "<group>"; };
+		E71F401A2D5EF2DF008992D1 /* ImageEditFilterControlBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditFilterControlBase.swift; sourceTree = "<group>"; };
+		E71F401B2D5EF2DF008992D1 /* ImageEditFilterControlRepresentables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditFilterControlRepresentables.swift; sourceTree = "<group>"; };
+		E71F401C2D5EF2DF008992D1 /* ImageEditHighlightsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditHighlightsControl.swift; sourceTree = "<group>"; };
+		E71F401D2D5EF2DF008992D1 /* ImageEditSaturationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditSaturationControl.swift; sourceTree = "<group>"; };
+		E71F401E2D5EF2DF008992D1 /* ImageEditShadowsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditShadowsControl.swift; sourceTree = "<group>"; };
+		E71F401F2D5EF2DF008992D1 /* ImageEditTemperatureControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditTemperatureControl.swift; sourceTree = "<group>"; };
+		E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenIdentifiableView.swift; sourceTree = "<group>"; };
+		E71F40292D5EF559008992D1 /* FullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenView.swift; sourceTree = "<group>"; };
+		E736D3E32D5EADB4007747CC /* ImageEditMenuControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditMenuControlView.swift; sourceTree = "<group>"; };
+		E736D3E42D5EADB4007747CC /* ImageEditNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditNavigationView.swift; sourceTree = "<group>"; };
+		E736D3E52D5EADB4007747CC /* ImageEditStepSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditStepSlider.swift; sourceTree = "<group>"; };
+		E736D3E72D5EADB4007747CC /* ImageEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditView.swift; sourceTree = "<group>"; };
+		E736D3E82D5EADB4007747CC /* ImageEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditViewModel.swift; sourceTree = "<group>"; };
+		E736D3F12D5EADC2007747CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E736D3F32D5EAFE8007747CC /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		E736D4032D5EB86B007747CC /* ImageEditMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditMenuView.swift; sourceTree = "<group>"; };
+		E736D4042D5EB86B007747CC /* ImagePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewView.swift; sourceTree = "<group>"; };
 		FC110D2A2660F90200CC45EA /* ImageSourceInitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourceInitTest.swift; sourceTree = "<group>"; };
 		FC110D2D2660FD2200CC45EA /* 5633ed9d0eb700d0093bf85d86a95ebf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5633ed9d0eb700d0093bf85d86a95ebf.jpg; sourceTree = "<group>"; };
 		FC110D2E2660FD2200CC45EA /* acce3629083f0e348e94fb58f952d3de.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = acce3629083f0e348e94fb58f952d3de.jpg; sourceTree = "<group>"; };
@@ -946,7 +981,6 @@
 				FC06C87F2A53AF4500215B89 /* BrightroomEngine in Frameworks */,
 				4B7513C82B6BEDFD00A4743E /* SwiftUIHosting in Frameworks */,
 				4BA2B1B42B86282D00E6DE64 /* BrightroomUIPhotosCrop in Frameworks */,
-				4B5E72BC2B6B761800DE7A2A /* Reveal-SDK in Frameworks */,
 				FC06C8812A53AF4500215B89 /* BrightroomUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1077,10 +1111,11 @@
 		4B98CCBA25EFF31300E4F61F /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E736D3F12D5EADC2007747CC /* ContentView.swift */,
+				E736D3E92D5EADB4007747CC /* ImageEdit */,
 				4B98CCBB25EFF31300E4F61F /* SwiftUIDemoApp.swift */,
 				4B3957C82C16D9ED000BD249 /* DemoFilterView.swift */,
-				4B98CCBD25EFF31300E4F61F /* ContentView.swift */,
-				4B8CAF6D25FFCE720075032A /* FullscreenIdentifiableView.swift */,
+				4B98CCBD25EFF31300E4F61F /* ContentView2.swift */,
 				4B8CAF6825FFCD720075032A /* IsolatedEditingView.swift */,
 				4B8CAF7225FFD13D0075032A /* BlurryMaskingViewWrapper.swift */,
 				4B75113F25F13276002D804A /* DemoCropView.swift */,
@@ -1183,6 +1218,47 @@
 				4BED49E7261C9CE20011A98F /* Info.plist */,
 			);
 			path = ShareLUT;
+			sourceTree = "<group>";
+		};
+		E736D3E22D5EADB4007747CC /* FilterControl */ = {
+			isa = PBXGroup;
+			children = (
+				E71F40182D5EF2DF008992D1 /* ImageEditContrastControl.swift */,
+				E71F40192D5EF2DF008992D1 /* ImageEditExposureControl.swift */,
+				E71F401A2D5EF2DF008992D1 /* ImageEditFilterControlBase.swift */,
+				E71F401B2D5EF2DF008992D1 /* ImageEditFilterControlRepresentables.swift */,
+				E71F401C2D5EF2DF008992D1 /* ImageEditHighlightsControl.swift */,
+				E71F401D2D5EF2DF008992D1 /* ImageEditSaturationControl.swift */,
+				E71F401E2D5EF2DF008992D1 /* ImageEditShadowsControl.swift */,
+				E71F401F2D5EF2DF008992D1 /* ImageEditTemperatureControl.swift */,
+			);
+			path = FilterControl;
+			sourceTree = "<group>";
+		};
+		E736D3E62D5EADB4007747CC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */,
+				E71F40292D5EF559008992D1 /* FullscreenView.swift */,
+				E736D4032D5EB86B007747CC /* ImageEditMenuView.swift */,
+				E736D4042D5EB86B007747CC /* ImagePreviewView.swift */,
+				E736D3F32D5EAFE8007747CC /* FilterButton.swift */,
+				E736D3E22D5EADB4007747CC /* FilterControl */,
+				E736D3E32D5EADB4007747CC /* ImageEditMenuControlView.swift */,
+				E736D3E42D5EADB4007747CC /* ImageEditNavigationView.swift */,
+				E736D3E52D5EADB4007747CC /* ImageEditStepSlider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E736D3E92D5EADB4007747CC /* ImageEdit */ = {
+			isa = PBXGroup;
+			children = (
+				E736D3E62D5EADB4007747CC /* Components */,
+				E736D3E72D5EADB4007747CC /* ImageEditView.swift */,
+				E736D3E82D5EADB4007747CC /* ImageEditViewModel.swift */,
+			);
+			path = ImageEdit;
 			sourceTree = "<group>";
 		};
 		FC110D2C2660FD0A00CC45EA /* ImageSamples */ = {
@@ -1584,7 +1660,6 @@
 			packageProductDependencies = (
 				FC06C87E2A53AF4500215B89 /* BrightroomEngine */,
 				FC06C8802A53AF4500215B89 /* BrightroomUI */,
-				4B5E72BB2B6B761800DE7A2A /* Reveal-SDK */,
 				4B7513C72B6BEDFD00A4743E /* SwiftUIHosting */,
 				4B7513CA2B6BEE2100A4743E /* SwiftUISupport */,
 				4B46E71A2B762E20003179C2 /* MondrianLayout */,
@@ -2158,21 +2233,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B8CAF6E25FFCE720075032A /* FullscreenIdentifiableView.swift in Sources */,
 				4B2324E42B763D4A00662EB8 /* GeometryPlayground.swift in Sources */,
 				4B8CAF7325FFD13D0075032A /* BlurryMaskingViewWrapper.swift in Sources */,
+				E71F40202D5EF2DF008992D1 /* ImageEditSaturationControl.swift in Sources */,
+				E71F40212D5EF2DF008992D1 /* ImageEditShadowsControl.swift in Sources */,
+				E71F40222D5EF2DF008992D1 /* ImageEditTemperatureControl.swift in Sources */,
+				E71F40232D5EF2DF008992D1 /* ImageEditHighlightsControl.swift in Sources */,
+				E71F40242D5EF2DF008992D1 /* ImageEditExposureControl.swift in Sources */,
+				E71F40252D5EF2DF008992D1 /* ImageEditFilterControlBase.swift in Sources */,
+				E71F40262D5EF2DF008992D1 /* ImageEditContrastControl.swift in Sources */,
+				E71F40272D5EF2DF008992D1 /* ImageEditFilterControlRepresentables.swift in Sources */,
 				4B3957C92C16D9ED000BD249 /* DemoFilterView.swift in Sources */,
 				4BA989732B7122C800EB7983 /* DemoMaskingView.swift in Sources */,
 				4B8CAF6925FFCD720075032A /* IsolatedEditingView.swift in Sources */,
 				4BA989712B70F10300EB7983 /* ObjectEdge.swift in Sources */,
+				E736D3F42D5EAFE8007747CC /* FilterButton.swift in Sources */,
 				4B7EE66D25F515B400E17AF1 /* XCAssets+Generated.swift in Sources */,
 				4BA9896F2B70BF2000EB7983 /* RenderedResultView.swift in Sources */,
-				4B98CCBE25EFF31300E4F61F /* ContentView.swift in Sources */,
+				4B98CCBE25EFF31300E4F61F /* ContentView2.swift in Sources */,
 				4B75114025F13276002D804A /* DemoCropView.swift in Sources */,
 				0451857F2B8F4A9E00A74713 /* DemoCropView2.swift in Sources */,
 				4B9325832B6A923400DDABAC /* RotateScrollView.swift in Sources */,
 				4B98CCBC25EFF31300E4F61F /* SwiftUIDemoApp.swift in Sources */,
+				E71F402A2D5EF559008992D1 /* FullscreenView.swift in Sources */,
+				E71F402B2D5EF559008992D1 /* FullscreenIdentifiableView.swift in Sources */,
 				4B98CCE725EFF4EF00E4F61F /* Mocks.swift in Sources */,
+				E736D4052D5EB86B007747CC /* ImagePreviewView.swift in Sources */,
+				E736D4062D5EB86B007747CC /* ImageEditMenuView.swift in Sources */,
+				E736D3EB2D5EADB4007747CC /* ImageEditStepSlider.swift in Sources */,
+				E736D3F22D5EADC2007747CC /* ContentView.swift in Sources */,
+				E736D3EC2D5EADB4007747CC /* ImageEditMenuControlView.swift in Sources */,
+				E736D3ED2D5EADB4007747CC /* ImageEditViewModel.swift in Sources */,
+				E736D3EF2D5EADB4007747CC /* ImageEditView.swift in Sources */,
+				E736D3F02D5EADB4007747CC /* ImageEditNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2603,10 +2696,6 @@
 		4B487E5E28EEC0670026A8CF /* BrightroomEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BrightroomEngine;
-		};
-		4B5E72BB2B6B761800DE7A2A /* Reveal-SDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "Reveal-SDK";
 		};
 		4B7513C72B6BEDFD00A4743E /* SwiftUIHosting */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -1,4 +1,3 @@
-
 import BrightroomEngine
 import BrightroomUI
 import SwiftUI
@@ -108,7 +107,6 @@ struct DemoFilterView: View {
 
   var body: some View {
     VStack {
-
       ViewHost(instantiated: ImagePreviewView(editingStack: editingStack))
 
       SwiftUICropView(editingStack: editingStack, contentInset: .zero)
