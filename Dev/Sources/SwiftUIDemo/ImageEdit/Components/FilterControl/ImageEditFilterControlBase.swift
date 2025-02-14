@@ -5,17 +5,12 @@ import Verge
 
 class ImageEditFilterControlBase: UIView {
   let editingStack: EditingStack
-  let slider: ImageEditStepSlider
   let viewModel: ImageEditViewModel
-  
-  var title: String {
-    fatalError("Must be overrided")
-  }
+  let slider = ClassicImageEditStepSlider()
   
   init(editingStack: EditingStack, viewModel: ImageEditViewModel) {
     self.editingStack = editingStack
     self.viewModel = viewModel
-    self.slider = ImageEditStepSlider()
     super.init(frame: .zero)
     setupView()
   }
@@ -30,14 +25,18 @@ class ImageEditFilterControlBase: UIView {
     addSubview(slider)
     slider.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-      slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+      slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+      slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
       slider.centerYAnchor.constraint(equalTo: centerYAnchor)
     ])
   }
   
+  open var title: String {
+    fatalError("Must be overridden")
+  }
+  
   func didReceiveCurrentEdit(state: Changes<ImageEditViewModel.State>) {
-    // Override in subclass
+    // To be overridden by subclasses
   }
   
   func pop(animated: Bool) {

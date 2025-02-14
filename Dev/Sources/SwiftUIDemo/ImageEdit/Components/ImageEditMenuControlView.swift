@@ -1,99 +1,93 @@
 import SwiftUI
+import BrightroomEngine
+import BrightroomUI
 
 struct ImageEditMenuControlView: View {
-  @ObservedObject var viewModel: ImageEditViewModel
-  @State private var selectedFilter: FilterType?
-  
-  enum FilterType: Identifiable {
-    case exposure
-    case contrast
-    case saturation
-    case temperature
-    case highlights
-    case shadows
-    case vignette
-    case sharpen
-    case clarity
+    @ObservedObject var viewModel: ImageEditViewModel
+    @State private var selectedFilter: FilterType?
     
-    var id: Int {
-      switch self {
-      case .exposure: return 0
-      case .contrast: return 1
-      case .saturation: return 2
-      case .temperature: return 3
-      case .highlights: return 4
-      case .shadows: return 5
-      case .vignette: return 6
-      case .sharpen: return 7
-      case .clarity: return 8
-      }
-    }
-  }
-  
-  var body: some View {
-    ScrollView(.horizontal, showsIndicators: false) {
-      HStack(spacing: 20) {
-        FilterButton(
-          title: "Brightness",
-          image: "sun.max.fill",
-          action: { selectedFilter = .exposure }
-        )
-        
-        FilterButton(
-          title: "Contrast", 
-          image: "circle.lefthalf.filled",
-          action: { selectedFilter = .contrast }
-        )
-        
-        FilterButton(
-          title: "Saturation",
-          image: "drop.fill",
-          action: { selectedFilter = .saturation }
-        )
-        
-        FilterButton(
-          title: "Temperature",
-          image: "thermometer",
-          action: { selectedFilter = .temperature }
-        )
-        
-        FilterButton(
-          title: "Highlights",
-          image: "sun.max",
-          action: { selectedFilter = .highlights }
-        )
-        
-        FilterButton(
-          title: "Shadows",
-          image: "moon.fill",
-          action: { selectedFilter = .shadows }
-        )
-      }
-      .padding()
-    }
-    .sheet(item: $selectedFilter) { filter in
-      NavigationView {
-        switch filter {
-        case .exposure:
-          ImageEditExposureControlRepresentable(viewModel: viewModel)
-        case .contrast:
-          ImageEditContrastControlRepresentable(viewModel: viewModel)
-        case .saturation:
-          ImageEditSaturationControlRepresentable(viewModel: viewModel)
-        case .temperature:
-          ImageEditTemperatureControlRepresentable(viewModel: viewModel)
-        case .highlights:
-          ImageEditHighlightsControlRepresentable(viewModel: viewModel)
-        case .shadows:
-          ImageEditShadowsControlRepresentable(viewModel: viewModel)
-        case .vignette:
-          Text("Vignette Control")
-        case .sharpen:
-          Text("Sharpen Control")
-        case .clarity:
-          Text("Clarity Control")
+    var body: some View {
+        VStack(spacing: 0) {
+            // Main content area
+            Spacer()
+            
+            // Filter control area if filter is selected
+            if let filter = selectedFilter {
+                filterControlView(for: filter)
+                    .transition(.move(edge: .bottom))
+                    .background(Color(UIColor.systemBackground))
+            }
+            
+            // Bottom menu with filter buttons
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 16) {
+                    ForEach(FilterType.allCases, id: \.self) { filter in
+                        ImageEditFilterButton(
+                            filter: filter,
+                            isSelected: selectedFilter == filter,
+                            action: {
+                                withAnimation {
+                                    if selectedFilter == filter {
+                                        selectedFilter = nil
+                                        // Take snapshot when deselecting filter
+                                        viewModel.editingStack.takeSnapshot()
+                                    } else {
+                                        selectedFilter = filter
+                                    }
+                                }
+                            }
+                        )
+                    }
+                }
+                .padding(.horizontal, 36)
+            }
+            .frame(height: 100)
+            .background(Color(UIColor.systemBackground))
         }
-      }
     }
-  }
+    
+    @ViewBuilder
+    private func filterControlView(for filter: FilterType) -> some View {
+        VStack {
+            // Navigation bar
+            HStack {
+                Button("Cancel") {
+                    withAnimation {
+                        // Revert changes when canceling
+                        viewModel.editingStack.revertEdit()
+                        selectedFilter = nil
+                    }
+                }
+                Spacer()
+                Text(filter.title)
+                    .font(.headline)
+                Spacer()
+                Button("Done") {
+                    withAnimation {
+                        // Take snapshot when done
+                        viewModel.editingStack.takeSnapshot()
+                        selectedFilter = nil
+                    }
+                }
+            }
+            .padding()
+            
+            // Filter control content
+            switch filter {
+            case .exposure:
+                ImageEditExposureControlRepresentable(viewModel: viewModel)
+            case .contrast:
+                ImageEditContrastControlRepresentable(viewModel: viewModel)
+            case .saturation:
+                ImageEditSaturationControlRepresentable(viewModel: viewModel)
+            case .temperature:
+                ImageEditTemperatureControlRepresentable(viewModel: viewModel)
+            case .highlights:
+                ImageEditHighlightsControlRepresentable(viewModel: viewModel)
+            case .shadows:
+                ImageEditShadowsControlRepresentable(viewModel: viewModel)
+            }
+        }
+        .frame(height: 150)
+    }
 } 

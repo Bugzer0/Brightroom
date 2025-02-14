@@ -1,22 +1,35 @@
 import SwiftUI
+import BrightroomEngine
+import BrightroomUI
 
 struct ImageEditFilterButton: View {
-    let title: String
-    let image: String
+    let filter: FilterType
+    let isSelected: Bool
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             VStack(spacing: 8) {
-                Image(systemName: image)
-                    .font(.system(size: 24))
-                Text(title)
-                    .font(.caption)
+                if isSelected {
+                    Circle()
+                        .fill(Color.black)
+                        .frame(width: 4, height: 4)
+                } else {
+                    Circle()
+                        .fill(Color.clear)
+                        .frame(width: 4, height: 4)
+                }
+                
+                Image(filter.iconName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(.black)
+                
+                Text(filter.title)
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.black)
             }
-            .foregroundColor(.primary)
-            .frame(width: 80, height: 80)
-            .background(Color(.systemGray6))
-            .cornerRadius(12)
         }
     }
 } 

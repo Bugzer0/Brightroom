@@ -14,7 +14,7 @@ struct ImageEditView: View {
       ImagePreviewViewRepresentable(editingStack: viewModel.editingStack)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
       
-      ImageEditMenuView(viewModel: viewModel)
+      ImageEditMenuControlView(viewModel: viewModel)
         .frame(height: 120)
     }
   }

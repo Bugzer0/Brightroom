@@ -8,8 +8,6 @@ final class ImageEditShadowsControl: ImageEditFilterControlBase {
         return "Shadows"
     }
     
-    private lazy var navigationView = ImageEditNavigationView(saveText: "Done", cancelText: "Cancel")
-    
     override init(editingStack: EditingStack, viewModel: ImageEditViewModel) {
         super.init(editingStack: editingStack, viewModel: viewModel)
     }
@@ -22,30 +20,6 @@ final class ImageEditShadowsControl: ImageEditFilterControlBase {
         super.setupView()
         slider.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
         updateSliderValue()
-        setupNavigationView()
-    }
-    
-    private func setupNavigationView() {
-        addSubview(navigationView)
-        navigationView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            navigationView.topAnchor.constraint(equalTo: topAnchor),
-            navigationView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            navigationView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-        
-        navigationView.didTapCancelButton = { [weak self] in
-            guard let self = self else { return }
-            self.editingStack.revertEdit()
-            self.pop(animated: true)
-        }
-        
-        navigationView.didTapDoneButton = { [weak self] in
-            guard let self = self else { return }
-            self.editingStack.takeSnapshot()
-            self.pop(animated: true)
-        }
     }
     
     private func updateSliderValue() {
