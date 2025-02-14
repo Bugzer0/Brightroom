@@ -100,6 +100,7 @@
 		E71F402A2D5EF559008992D1 /* FullscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40292D5EF559008992D1 /* FullscreenView.swift */; };
 		E71F402B2D5EF559008992D1 /* FullscreenIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */; };
 		E71F402D2D5F4A8A008992D1 /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F402C2D5F4A8A008992D1 /* FilterType.swift */; };
+		E71F402F2D5F596A008992D1 /* PresetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71F402E2D5F596A008992D1 /* PresetListView.swift */; };
 		E736D3EB2D5EADB4007747CC /* ImageEditStepSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E52D5EADB4007747CC /* ImageEditStepSlider.swift */; };
 		E736D3EC2D5EADB4007747CC /* ImageEditMenuControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E32D5EADB4007747CC /* ImageEditMenuControlView.swift */; };
 		E736D3ED2D5EADB4007747CC /* ImageEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736D3E82D5EADB4007747CC /* ImageEditViewModel.swift */; };
@@ -588,6 +589,7 @@
 		E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenIdentifiableView.swift; sourceTree = "<group>"; };
 		E71F40292D5EF559008992D1 /* FullscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenView.swift; sourceTree = "<group>"; };
 		E71F402C2D5F4A8A008992D1 /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
+		E71F402E2D5F596A008992D1 /* PresetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetListView.swift; sourceTree = "<group>"; };
 		E736D3E32D5EADB4007747CC /* ImageEditMenuControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditMenuControlView.swift; sourceTree = "<group>"; };
 		E736D3E42D5EADB4007747CC /* ImageEditNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditNavigationView.swift; sourceTree = "<group>"; };
 		E736D3E52D5EADB4007747CC /* ImageEditStepSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditStepSlider.swift; sourceTree = "<group>"; };
@@ -1238,6 +1240,7 @@
 		E736D3E62D5EADB4007747CC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E71F402E2D5F596A008992D1 /* PresetListView.swift */,
 				E71F402C2D5F4A8A008992D1 /* FilterType.swift */,
 				E71F40282D5EF559008992D1 /* FullscreenIdentifiableView.swift */,
 				E71F40292D5EF559008992D1 /* FullscreenView.swift */,
@@ -2252,6 +2255,7 @@
 				4B7EE66D25F515B400E17AF1 /* XCAssets+Generated.swift in Sources */,
 				4BA9896F2B70BF2000EB7983 /* RenderedResultView.swift in Sources */,
 				4B98CCBE25EFF31300E4F61F /* ContentView2.swift in Sources */,
+				E71F402F2D5F596A008992D1 /* PresetListView.swift in Sources */,
 				4B75114025F13276002D804A /* DemoCropView.swift in Sources */,
 				0451857F2B8F4A9E00A74713 /* DemoCropView2.swift in Sources */,
 				4B9325832B6A923400DDABAC /* RotateScrollView.swift in Sources */,
