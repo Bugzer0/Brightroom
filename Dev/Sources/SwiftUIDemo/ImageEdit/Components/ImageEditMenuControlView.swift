@@ -25,6 +25,7 @@ struct ImageEditMenuControlView: View {
                         ImageEditFilterButton(
                             filter: filter,
                             isSelected: selectedFilter == filter,
+                            hasChanges: hasChanges(for: filter),
                             action: {
                                 withAnimation {
                                     if selectedFilter == filter {
@@ -89,5 +90,26 @@ struct ImageEditMenuControlView: View {
             }
         }
         .frame(height: 150)
+    }
+    
+    private func hasChanges(for filter: FilterType) -> Bool {
+        guard let loadedState = viewModel.editingStack.store.state.loadedState else {
+            return false
+        }
+        
+        switch filter {
+        case .exposure:
+            return loadedState.currentEdit.filters.exposure != nil
+        case .contrast:
+            return loadedState.currentEdit.filters.contrast != nil
+        case .saturation:
+            return loadedState.currentEdit.filters.saturation != nil
+        case .temperature:
+            return loadedState.currentEdit.filters.temperature != nil
+        case .highlights:
+            return loadedState.currentEdit.filters.highlights != nil
+        case .shadows:
+            return loadedState.currentEdit.filters.shadows != nil
+        }
     }
 } 

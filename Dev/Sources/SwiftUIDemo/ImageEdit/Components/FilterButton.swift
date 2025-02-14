@@ -5,12 +5,13 @@ import BrightroomUI
 struct ImageEditFilterButton: View {
     let filter: FilterType
     let isSelected: Bool
+    let hasChanges: Bool
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             VStack(spacing: 8) {
-                if isSelected {
+                if isSelected || hasChanges {
                     Circle()
                         .fill(Color.black)
                         .frame(width: 4, height: 4)
