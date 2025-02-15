@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -973,6 +973,10 @@
 		FC110F162660FE0B00CC45EA /* m1-cb265e4ae8967567fca5b0ecd58b90cb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "m1-cb265e4ae8967567fca5b0ecd58b90cb.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E7D1CC922D608AAB00AEF399 /* Resource */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resource; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		4B98CCB625EFF31300E4F61F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -1113,6 +1117,7 @@
 		4B98CCBA25EFF31300E4F61F /* SwiftUIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E7D1CC922D608AAB00AEF399 /* Resource */,
 				E736D3F12D5EADC2007747CC /* ContentView.swift */,
 				E736D3E92D5EADB4007747CC /* ImageEdit */,
 				4B98CCBB25EFF31300E4F61F /* SwiftUIDemoApp.swift */,
@@ -1257,11 +1262,19 @@
 		E736D3E92D5EADB4007747CC /* ImageEdit */ = {
 			isa = PBXGroup;
 			children = (
+				E7D1CC8F2D607ABB00AEF399 /* Models */,
 				E736D3E62D5EADB4007747CC /* Components */,
 				E736D3E72D5EADB4007747CC /* ImageEditView.swift */,
 				E736D3E82D5EADB4007747CC /* ImageEditViewModel.swift */,
 			);
 			path = ImageEdit;
+			sourceTree = "<group>";
+		};
+		E7D1CC8F2D607ABB00AEF399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FC110D2C2660FD0A00CC45EA /* ImageSamples */ = {
@@ -1658,6 +1671,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E7D1CC922D608AAB00AEF399 /* Resource */,
 			);
 			name = SwiftUIDemo;
 			packageProductDependencies = (
